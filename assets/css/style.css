@@ -54,6 +54,12 @@ header>h1 {
     display: none;
 }
 
+/* Hides the princess image from view */
+
+.hidden {
+    filter: brightness(0);
+}
+
 #score-area {
     text-align: center;
 }

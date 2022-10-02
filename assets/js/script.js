@@ -37,14 +37,37 @@ function startGame(){
     for (let randomCard of randomCards) {
         let cardSource = randomCard.getAttribute("src");
         let cardDescription = randomCard.getAttribute("alt");
+        let cardData = randomCard.getAttribute("data-type");
         let image = document.createElement("img");
         image.setAttribute("src", cardSource);
         image.setAttribute("alt", cardDescription);
-        image.className = "card-back";
+        image.setAttribute("data-type", cardData)
+        image.className = "card-back hidden";
         let cardGame = document.getElementsByClassName("random-card-area");
         cardGame[0].appendChild(image);
     }
 
-
-
 }
+
+    // Enables you to click the images and turn them over
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    // Checks if cards that have been clicked match
+
+
+
+
+
+
