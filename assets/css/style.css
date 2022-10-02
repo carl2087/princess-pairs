@@ -8,7 +8,7 @@
     background-color: #AFCBFF
 }
 
-header > h1 {
+header>h1 {
     text-align: center;
     font-size: 4rem;
     color: #fe4140;
@@ -16,7 +16,7 @@ header > h1 {
     text-shadow: 2px 2px black;
 }
 
-#game-description > p {
+#game-description>p {
     text-align: center;
     font-size: 2rem;
     color: #fe4140;
@@ -29,31 +29,43 @@ header > h1 {
     margin-left: 2.5%;
     margin-right: 2.5%;
     margin-top: 10px;
-    margin-bottom: 0px;    
+    margin-bottom: 0px;
 }
 
-#game-area > img {
+.random-card-area>img {
+
     height: 160px;
     padding: 10px;
     border: ridge 4px #5efc8d;
     border-radius: 5px;
     background-color: whitesmoke;
     margin: 20px;
-    box-shadow:0 0 10px #fe4140;
+    box-shadow: 0 0 10px #fe4140;
+}
+
+#game-area>img {
+    height: 160px;
+    padding: 10px;
+    border: ridge 4px #5efc8d;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 20px;
+    box-shadow: 0 0 10px #fe4140;
+    display: none;
 }
 
 #score-area {
     text-align: center;
 }
 
-#score-area > p {
+#score-area>p {
     display: inline;
     margin: auto;
     color: #fe4140;
     font-size: 2rem;
     padding: 50px;
     padding-bottom: 0;
-    background-color: transparent;    
+    background-color: transparent;
 }
 
 footer {
@@ -76,26 +88,24 @@ footer {
         margin-bottom: 0;
     }
 
-    #game-description > p {
+    #game-description>p {
         font-size: 1.2rem;
         margin-bottom: 5px;
     }
 
-    #game-area {
+    .random-card-area>img {
         padding-bottom: 0;
         margin-bottom: 0;
-        max-height: 600px;
+        max-height: 116px;
     }
 
-    #game-area > img {
-        max-height: 20%;
-    }
+
 
     footer {
         margin-top: 0;
     }
 
-    #score-area > p {
+    #score-area>p {
         font-size: 1.2rem;
         padding-top: 5px;
         margin-top: 0%;
@@ -105,7 +115,7 @@ footer {
 /* for screen size 425 pixels and below */
 
 @media screen and (max-width: 425px) {
-    header > h1 {
+    header>h1 {
         text-align: center;
     }
 
@@ -113,7 +123,7 @@ footer {
         font-size: 2.5rem;
     }
 
-    #game-description > p {
+    #game-description>p {
         font-size: 1rem;
     }
 
@@ -123,13 +133,13 @@ footer {
         margin-top: 50px;
     }
 
-    #game-area > img {
+    .random-card-area>img {
         max-height: 85px;
         padding: 5px;
         margin: auto;
     }
 
-    #score-area > p {
+    #score-area>p {
         text-align: center;
         font-size: 1rem;
         padding: 25px;
@@ -139,8 +149,8 @@ footer {
 /* for screen size 375 pixels and below */
 
 @media screen and (max-width: 375px) {
-    #game-area > img {
-        max-height: 70px;
+    .random-card-area>img {
+        max-height: 65px;
     }
 }
 
@@ -155,13 +165,12 @@ footer {
         margin-left: 44px;
     }
 
-    #game-area > img {
+    #game-area>img {
         max-height: 60px;
     }
 
-    #score-area > p {
+    #score-area>p {
         padding: 15px;
         font-size: 0.8rem;
     }
 }
-
