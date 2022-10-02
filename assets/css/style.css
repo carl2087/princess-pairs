@@ -13,6 +13,7 @@ header > h1 {
     font-size: 4rem;
     color: #fe4140;
     margin-bottom: 20px;
+    text-shadow: 2px 2px black;
 }
 
 #game-description > p {
@@ -34,10 +35,11 @@ header > h1 {
 #game-area > img {
     height: 160px;
     padding: 10px;
-    border: solid 3px black;
-    border-radius: 5%;
+    border: ridge 4px #5efc8d;
+    border-radius: 5px;
     background-color: whitesmoke;
     margin: 20px;
+    box-shadow:0 0 10px #fe4140;
 }
 
 #score-area {
