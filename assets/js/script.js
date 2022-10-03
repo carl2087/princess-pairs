@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Global variable for number of cards
+
 const numOfCards = 18;
 
 
 function startGame(){
 
     // create an array for the random cards
-
     let randomArray = [];
     while (randomArray.length < numOfCards) {
         let number = Math.floor(Math.random() * numOfCards);
@@ -47,12 +47,21 @@ function startGame(){
         cardGame[0].appendChild(image);
     }
 
+    cards = document.getElementsByClassName("card-back");
+    for (let card of cards) {
+        card.addEventListener("click", showCard)
+    }
+    
 }
 
-    // Enables you to click the images and turn them over
+function showCard () {
+    let cardReveal = document.getElementsByClassName("card-front");
+    cardReveal.classList.remove("hidden");
+}
 
+    
 
-
+    
 
 
 
