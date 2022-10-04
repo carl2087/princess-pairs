@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     startGame();
 });
 
-// Global variable for number of cards
+// Global variables for game
 
+let cardRevealed = [];
 const numOfCards = 18;
+let seeCard = function (e) {
+    showCard(cardRevealed, e.currentTarget);
+};
 
 
 function startGame(){
@@ -49,14 +53,13 @@ function startGame(){
 
     cards = document.getElementsByClassName("card-back");
     for (let card of cards) {
-        card.addEventListener("click", showCard)
+        card.addEventListener("click", seeCard)
     }
     
 }
 
-function showCard () {
-    let cardReveal = document.getElementsByClassName("card-front");
-    cardReveal.classList.remove("hidden");
+function showCard (cardRevealed, card) {
+    card.classList.remove("hidden")
 }
 
     
