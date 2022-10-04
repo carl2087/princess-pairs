@@ -60,11 +60,13 @@ function startGame(){
 
 function showCard (cardRevealed, card) {
     card.classList.remove("hidden")
-}
+    cardRevealed.push(card);
 
-    
+    if (cardRevealed.length === 2) {
+        
+    }
 
-    
+
 
 
 
