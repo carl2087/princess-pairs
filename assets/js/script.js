@@ -63,25 +63,36 @@ function showCard (cardRevealed, card) {
     cardRevealed.push(card);
 
     if (cardRevealed.length === 2) {
-        
+        let cards = document.getElementsByClassName("card-back")
+        for (let card of cards) {
+            card.removeEventListener("click", seeCard)
+        }
+        checkMatch(cardRevealed);
+    } else if (cardRevealed.length > 2) {
+        alert ("Too many cards open!")
+        throw `Too Many cards open! Abort!`
     }
-
-
-
-
-
-
-
-
-
+        
     
-
-
+}
 
     // Checks if cards that have been clicked match
+function checkMatch (cardRevealed) {
 
+    let firstCard = cardRevealed[0].getAttribute("data-type");
+    let secondCard = cardRevealed[1].getAttribute("data-type");
 
-
-
-
-
+    if (firstCard === secondCard) {
+        console.log("correct")
+    } else if (firstCard != secondCard) {
+        console.log ("not a pair")
+        cardRevealed[0].classList.add("hidden")
+        cardRevealed[1].classList.add("hidden")
+        let cards = document.getElementsByClassName("card-back")
+        for (let card of cards) {
+            card.addEventListener("click", seeCard)
+        }
+        cardRevealed.length = 0
+    }
+    
+}
