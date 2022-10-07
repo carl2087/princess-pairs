@@ -68,7 +68,11 @@ function showCard (cardRevealed, card) {
         for (let card of cards) {
             card.removeEventListener("click", seeCard)
         }
-        checkMatch(cardRevealed);
+        setTimeout(function () {
+            checkMatch(cardRevealed);
+            checkMatch();
+        }, 1000);
+        
     } else if (cardRevealed.length > 2) {
         alert ("Too many cards open!")
         throw `Too Many cards open! Abort!`
@@ -116,4 +120,8 @@ function correctAnswer () {
 function wrongAnswer () {
     let newScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = --newScore;
+}
+
+function highScore () {
+
 }
