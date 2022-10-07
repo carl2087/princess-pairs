@@ -88,8 +88,10 @@ function checkMatch (cardRevealed) {
         for (let card of cards) {
             card.addEventListener("click", seeCard)
         }
-        cardRevealed[0].src = "assets/images/card-back-flower.png"
-        cardRevealed[1].src = "assets/images/card-back-flower.png"
+        cardRevealed[0].src = "assets/images/card-back-flower.png";
+        cardRevealed[1].src = "assets/images/card-back-flower.png";
+        cardRevealed[0].className = "blur";
+        cardRevealed[1].className = "blur";
         cardRevealed.length = 0
     } else if (firstCard != secondCard) {
         console.log ("not a pair")

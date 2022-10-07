@@ -58,7 +58,11 @@ header>h1 {
 /* Hides the princess image from view */
 
 .hidden {
-    content:url(/assets/images/balloon.png) ;
+    content:url("./assets/images/balloon.png");
+}
+
+.blur {
+    filter: blur(2px);
 }
 
 #score-area {
