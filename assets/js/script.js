@@ -92,7 +92,8 @@ function checkMatch (cardRevealed) {
         cardRevealed[1].src = "assets/images/card-back-flower.png";
         cardRevealed[0].className = "blur";
         cardRevealed[1].className = "blur";
-        cardRevealed.length = 0
+        cardRevealed.length = 0;
+        correctAnswer();
     } else if (firstCard != secondCard) {
         console.log ("not a pair")
         cardRevealed[0].classList.add("hidden"),
@@ -102,6 +103,17 @@ function checkMatch (cardRevealed) {
             card.addEventListener("click", seeCard)
         }
         cardRevealed.length = 0
+        wrongAnswer();
     }
     
+}
+
+function correctAnswer () {
+    let newScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++newScore;
+}
+
+function wrongAnswer () {
+    let newScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = --newScore;
 }
