@@ -58,7 +58,7 @@ header>h1 {
 /* Hides the princess image from view */
 
 .hidden {
-    content:url("./assets/images/balloon.png");
+    filter:brightness(0);
 }
 
 .blur {
