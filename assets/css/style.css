@@ -52,12 +52,13 @@ header>h1 {
     margin: 20px;
     box-shadow: 0 0 10px #fe4140;
     display: none;
+    z-index: 1;
 }
 
 /* Hides the princess image from view */
 
 .hidden {
-    filter: brightness(0);
+    content:url(/assets/images/balloon.png) ;
 }
 
 #score-area {

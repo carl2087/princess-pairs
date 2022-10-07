@@ -60,6 +60,7 @@ function startGame(){
 
 function showCard (cardRevealed, card) {
     card.classList.remove("hidden")
+    card.removeEventListener("click", seeCard)
     cardRevealed.push(card);
 
     if (cardRevealed.length === 2) {
@@ -83,10 +84,16 @@ function checkMatch (cardRevealed) {
     let secondCard = cardRevealed[1].getAttribute("data-type");
 
     if (firstCard === secondCard) {
-        console.log("correct")
+        let cards = document.getElementsByClassName("card-back")
+        for (let card of cards) {
+            card.addEventListener("click", seeCard)
+        }
+        cardRevealed[0].src = "assets/images/card-back-flower.png"
+        cardRevealed[1].src = "assets/images/card-back-flower.png"
+        cardRevealed.length = 0
     } else if (firstCard != secondCard) {
         console.log ("not a pair")
-        cardRevealed[0].classList.add("hidden")
+        cardRevealed[0].classList.add("hidden"),
         cardRevealed[1].classList.add("hidden")
         let cards = document.getElementsByClassName("card-back")
         for (let card of cards) {
