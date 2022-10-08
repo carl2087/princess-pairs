@@ -70,7 +70,6 @@ function showCard (cardRevealed, card) {
         }
         setTimeout(function () {
             checkMatch(cardRevealed);
-            checkMatch();
         }, 1000);
         
     } else if (cardRevealed.length > 2) {
@@ -107,6 +106,7 @@ function checkMatch (cardRevealed) {
         for (let card of cards) {
             card.addEventListener("click", seeCard)
         }
+        correctAnswer();
         cardRevealed.length = 0
     }
     
@@ -136,6 +136,5 @@ function correctAnswer () {
 
 function highScore () {
     let bestScore = parseInt(document.getElementById("score").innerText);
-    let newBestScore = parseInt(document.getElementById)("high-score");
-    
+    let newBestScore = parseInt(document.getElementById)("high-score");   
 }

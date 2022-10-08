@@ -57,7 +57,18 @@ header>h1 {
 /* Hides the princess image from view */
 
 .hidden {
-    filter:brightness(0);
+    animation-fill-mode: forwards;
+    animation-name: card-hidden;
+    animation-duration: 2s;
+}
+
+@keyframes card-hidden {
+    from {
+        filter:brightness();    
+    }
+    to {
+        filter:brightness(0);
+    }
 }
 
 .card-revealed {
