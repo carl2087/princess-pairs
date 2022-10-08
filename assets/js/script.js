@@ -58,6 +58,10 @@ function startGame(){
     
 }
 
+function playGame () {
+    let letsPlay = document.getElementById("lets-play")
+}
+
 function showCard (cardRevealed, card) {
     card.classList.remove("hidden")
     card.removeEventListener("click", seeCard)

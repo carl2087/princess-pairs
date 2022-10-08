@@ -19,13 +19,28 @@
         <h1 id="heading">Princess pairs</h1>
 
         <div id="game-description">
-            <p>Click on a card to turn it over and see if your princesses match!</p>
+            <button class="start-button">New Game!</button>
         </div>
     </header>
 
     <div id="game-area">
+
+        <!--Modal that appears on page load-->
         
-        <!-- Emapty div for random cards-->
+        <div id="start-modal" class="hide-modal">
+            <h2 class="modal-text">Welcome to Princess Pairs!</h2>
+            <p class="modal-text">
+                <br>
+                Click on the cards to reveal the princesses
+                <br>
+                match two of them to reveal the flower
+                <br>
+                complete the game in the least amount of moves!
+            </p>
+            <button id="lets-play" class="modal-button">Play Game</button>
+        </div>
+        
+        <!-- Empty div for random cards-->
         <div class="random-card-area">
         </div>
 

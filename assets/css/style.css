@@ -16,11 +16,62 @@ header>h1 {
     text-shadow: 2px 2px black;
 }
 
-#game-description>p {
+#game-description {
     text-align: center;
-    font-size: 2rem;
-    color: #fe4140;
     margin-bottom: 15px;
+}
+
+.start-button {
+    color: #fe4140;
+    font-size: 2rem;
+    border: ridge 4px #5efc8d;
+    padding: 8px;
+    background-color: whitesmoke;
+}
+
+.start-button:hover {
+    box-shadow: 0 0 15px #5efc8d;
+}
+
+.random-card-area {
+    margin-left: 20%;
+}
+
+#start-modal {
+    padding: 5%;
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 50%;
+    margin-left: 17%;
+    background-color: #5efc8dad;
+    border: ridge 4px #fe4140;
+    z-index: 99;
+}
+
+.hide-modal {
+    
+}
+
+.modal-text {
+    background-color: #5efc8d00;
+    color: #fe4140;
+    font-size: 2em;
+    vertical-align: auto;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.modal-button {
+    color: #fe4140;
+    font-size: 2rem;
+    border: ridge 4px #fe4140;
+    padding: 8px;
+    background-color: whitesmoke;
+    margin-top: 10%;
+}
+
+.modal-button:hover {
+    box-shadow: 0 0 15px #fe4140;
 }
 
 #game-area {
@@ -118,9 +169,36 @@ footer {
         margin-bottom: 0;
     }
 
-    #game-description>p {
+    .modal-button {
         font-size: 1.2rem;
         margin-bottom: 5px;
+    }
+
+    .modal-button:active {
+        background-color: #AFCBFF;
+        background-size: 100%;
+        transition: background 0.2s;
+        box-shadow: 0 0 15px #AFCBFF;
+    }
+
+    #game-area {
+        max-height: 70%;
+    }
+
+    .modal-text {
+        font-size: 1.5em;
+    }
+
+    .start-button {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .start-button:active {
+        background-color: #5efc8dbd;
+        background-size: 100%;
+        transition: background 0.2s;
+        box-shadow: 0 0 15px #5efc8d;
     }
 
     .random-card-area>img {
@@ -128,8 +206,6 @@ footer {
         margin-bottom: 0;
         max-height: 116px;
     }
-
-
 
     footer {
         margin-top: 0;
@@ -153,18 +229,32 @@ footer {
         font-size: 2.5rem;
     }
 
-    #game-description>p {
+    .start-button {
         font-size: 1rem;
+    }
+
+    #start-modal {
+        margin-left: 9%;
+    }
+
+    .modal-text {
+        font-size: 1.2em;
+    }
+
+    .modal-button {
+        font-size: 1rem;
+        margin-bottom: 5px;
     }
 
     #game-area {
         column-count: 3;
         margin-bottom: 50px;
         margin-top: 50px;
+        margin-left: 50px;
     }
 
     .random-card-area>img {
-        max-height: 85px;
+        max-height: 90px;
         padding: 5px;
         margin: auto;
     }
@@ -182,6 +272,15 @@ footer {
     .random-card-area>img {
         max-height: 65px;
     }
+
+    .modal-text {
+        font-size: 1.1em;
+    }
+
+    .start-modal {
+        margin-left: 5%;
+    }
+
 }
 
 /* for screen size 320 pixels and below */
@@ -202,5 +301,14 @@ footer {
     #score-area>p {
         padding: 15px;
         font-size: 0.8rem;
+    }
+
+    
+    .modal-text {
+        font-size: 1em;
+    }
+
+    .start-modal {
+        margin-left: 1%;
     }
 }
