@@ -52,7 +52,6 @@ header>h1 {
     margin: 20px;
     box-shadow: 0 0 10px #fe4140;
     display: none;
-    z-index: 1;
 }
 
 /* Hides the princess image from view */
@@ -61,8 +60,17 @@ header>h1 {
     filter:brightness(0);
 }
 
-.blur {
-    filter: blur(2px);
+.card-revealed {
+    animation: card-revealed 2s;
+}
+
+@keyframes card-revealed {
+    from {
+        filter:brightness(0);
+    }
+    to {
+        filter: brightness();
+    }
 }
 
 #score-area {

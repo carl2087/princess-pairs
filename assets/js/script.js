@@ -94,8 +94,8 @@ function checkMatch (cardRevealed) {
         }
         cardRevealed[0].src = "assets/images/card-back-flower.png";
         cardRevealed[1].src = "assets/images/card-back-flower.png";
-        cardRevealed[0].className = "blur";
-        cardRevealed[1].className = "blur";
+        cardRevealed[0].className = "card-revealed";
+        cardRevealed[1].className = "card-revealed";
         cardRevealed.length = 0;
         correctAnswer();
     } else if (firstCard != secondCard) {
@@ -107,21 +107,25 @@ function checkMatch (cardRevealed) {
             card.addEventListener("click", seeCard)
         }
         cardRevealed.length = 0
-        wrongAnswer();
     }
     
 }
+
+// Check when all cards are revealed and game finished
+
+function gameOver () {
+
+}
+
+
 
 function correctAnswer () {
     let newScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++newScore;
 }
 
-function wrongAnswer () {
-    let newScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = --newScore;
-}
-
 function highScore () {
-
+    let bestScore = parseInt(document.getElementById("score").innerText);
+    let newBestScore = parseInt(document.getElementById)("high-score");
+    
 }
