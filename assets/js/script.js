@@ -98,6 +98,7 @@ function checkMatch (cardRevealed) {
         cardRevealed[1].className = "card-revealed";
         cardRevealed.length = 0;
         correctAnswer();
+        gameOver();
     } else if (firstCard != secondCard) {
         console.log ("not a pair")
         cardRevealed[0].classList.add("hidden"),
@@ -114,7 +115,16 @@ function checkMatch (cardRevealed) {
 // Check when all cards are revealed and game finished
 
 function gameOver () {
+    let checkCards = document.getElementsByClassName("card-revealed")
 
+    if (checkCards.length === numOfCards) {
+        let currentScore = (document.getElementById("score").innerText);
+        let bestScore = (document.getElementById("high-score").innerText);
+        
+        if (currentScore > bestScore) {
+            document.getElementById("high-score").innerText = currentScore
+        }            
+    }
 }
 
 
