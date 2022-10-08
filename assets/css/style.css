@@ -37,7 +37,7 @@ header>h1 {
     margin-left: 20%;
 }
 
-#start-modal {
+.modal {
     padding: 5%;
     position: absolute;
     text-align: center;
@@ -50,7 +50,7 @@ header>h1 {
 }
 
 .hide-modal {
-    
+    display: none;
 }
 
 .modal-text {
@@ -233,7 +233,7 @@ footer {
         font-size: 1rem;
     }
 
-    #start-modal {
+    .modal {
         margin-left: 9%;
     }
 
@@ -277,7 +277,7 @@ footer {
         font-size: 1.1em;
     }
 
-    .start-modal {
+    .modal {
         margin-left: 5%;
     }
 
@@ -308,7 +308,7 @@ footer {
         font-size: 1em;
     }
 
-    .start-modal {
+    .modal {
         margin-left: 1%;
     }
 }

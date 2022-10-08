@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Global variables for game
 
+let buttons = document.querySelectorAll("button");
 let cardRevealed = [];
 const numOfCards = 18;
 let seeCard = function (e) {
@@ -14,6 +15,18 @@ let seeCard = function (e) {
 
 
 function startGame(){
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            setTimeout(hideModal, 500);
+        })
+    
+        }
+
+    function hideModal () {
+        let firstModal = document.getElementById("first-modal");
+        firstModal.classList.add("hide-modal")
+    }
 
     // create an array for the random cards
     let randomArray = [];
@@ -59,7 +72,7 @@ function startGame(){
 }
 
 function playGame () {
-    let letsPlay = document.getElementById("lets-play")
+    console.log("button clicked")
 }
 
 function showCard (cardRevealed, card) {
