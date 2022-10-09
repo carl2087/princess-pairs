@@ -35,6 +35,7 @@ header>h1 {
 
 .random-card-area {
     margin-left: 20%;
+    max-height: 80%;
 }
 
 .modal {
@@ -43,7 +44,7 @@ header>h1 {
     text-align: center;
     height: 40%;
     width: 50%;
-    margin-left: 17%;
+    margin-left: 19%;
     background-color: #5efc8dad;
     border: ridge 4px #fe4140;
     z-index: 99;
@@ -53,12 +54,21 @@ header>h1 {
     display: none;
 }
 
+.modal-title {
+    font-size: 3em;
+    letter-spacing: .1em;
+    background: none;
+    color: #fe4140;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+
 .modal-text {
     background-color: #5efc8d00;
     color: #fe4140;
     font-size: 2em;
     vertical-align: auto;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-shadow: 1.5px 0 0 #000, 0 -1.5px 0 #000, 0 1.5px 0 #000, -1.5px 0 0 #000;
+    line-height: 1.5em;
 }
 
 .modal-button {
@@ -85,7 +95,7 @@ header>h1 {
 
 .random-card-area>img {
 
-    height: 160px;
+    height: 140px;
     padding: 10px;
     border: ridge 4px #5efc8d;
     border-radius: 5px;
@@ -95,13 +105,6 @@ header>h1 {
 }
 
 #game-area>img {
-    height: 160px;
-    padding: 10px;
-    border: ridge 4px #5efc8d;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    margin: 20px;
-    box-shadow: 0 0 10px #fe4140;
     display: none;
 }
 
@@ -157,6 +160,31 @@ footer {
 
 /* media queries */
 
+/* media queries for 1447 pixels and down */
+
+@media screen and (max-width: 1447px) {
+
+    .modal {
+        margin-left: 20%;
+    }
+
+    .modal-title {
+        font-size: 2.5em;
+    }
+
+    .modal-text {
+        font-size: 1.5em;
+    }
+
+    .modal-button {
+        font-size: 1.5em;
+    }
+
+    .random-card-area > img {
+        height: 115px;
+    }
+}
+
 /* media queries for screen size 1025 pixels and below */
 
 @media screen and (max-width: 1025px) {
@@ -169,8 +197,20 @@ footer {
         margin-bottom: 0;
     }
 
+    .modal {
+        margin-top: 25px;
+    }
+
+    .modal-title {
+        font-size: 2em;
+    }
+
+    .modal-text {
+        font-size: 1em;
+    }
+
     .modal-button {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 5px;
     }
 
@@ -183,10 +223,6 @@ footer {
 
     #game-area {
         max-height: 70%;
-    }
-
-    .modal-text {
-        font-size: 1.5em;
     }
 
     .start-button {
@@ -218,6 +254,24 @@ footer {
     }
 }
 
+/* for screen size 768 and below */
+
+@media screen and (max-width: 768px) {
+
+    .modal-title {
+        font-size: 1.7em;
+    }
+
+    .modal-text {
+        font-size: 1.2em;
+    }
+
+    .modal-button {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+}
+
 /* for screen size 425 pixels and below */
 
 @media screen and (max-width: 425px) {
@@ -234,16 +288,21 @@ footer {
     }
 
     .modal {
-        margin-left: 9%;
+        margin-left: 20%;
+        margin-top: 20%;
+    }
+
+    .modal-title {
+        font-size: 1.3em;
     }
 
     .modal-text {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .modal-button {
-        font-size: 1rem;
-        margin-bottom: 5px;
+        font-size: 0.9em;
+        margin-bottom: 10px;
     }
 
     #game-area {
@@ -254,7 +313,7 @@ footer {
     }
 
     .random-card-area>img {
-        max-height: 90px;
+        max-height: 52px;
         padding: 5px;
         margin: auto;
     }
@@ -270,7 +329,7 @@ footer {
 
 @media screen and (max-width: 375px) {
     .random-card-area>img {
-        max-height: 65px;
+        max-height: 48px;
     }
 
     .modal-text {
@@ -278,7 +337,7 @@ footer {
     }
 
     .modal {
-        margin-left: 5%;
+        margin-left: 22%;
     }
 
 }
@@ -286,6 +345,7 @@ footer {
 /* for screen size 320 pixels and below */
 
 @media screen and (max-width: 320px) {
+
     #heading {
         font-size: 2rem;
     }
@@ -303,12 +363,15 @@ footer {
         font-size: 0.8rem;
     }
 
+    .modal-title {
+        font-size: 1em;
+    }
     
     .modal-text {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .modal {
-        margin-left: 1%;
+        margin-left: 23%;
     }
 }
