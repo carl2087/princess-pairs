@@ -5,7 +5,7 @@
     padding: 0;
     border: 0;
     font-family: 'Fredoka One', sans-serif;
-    background-color: #AFCBFF
+    background-color: #afcbff;
 }
 
 header>h1 {
@@ -13,7 +13,8 @@ header>h1 {
     font-size: 4rem;
     color: #fe4140;
     margin-bottom: 20px;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    letter-spacing: .1em;
 }
 
 #game-description {
@@ -27,6 +28,7 @@ header>h1 {
     border: ridge 4px #5efc8d;
     padding: 8px;
     background-color: whitesmoke;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 .start-button:hover {
@@ -77,6 +79,7 @@ header>h1 {
     padding: 8px;
     background-color: whitesmoke;
     margin-top: 10%;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 .modal-button:hover {
@@ -149,6 +152,7 @@ header>h1 {
     padding: 50px;
     padding-bottom: 0;
     background-color: transparent;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 footer {
