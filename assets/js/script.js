@@ -18,14 +18,13 @@ function startGame(){
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            setTimeout(hideModal, 500);
+            setTimeout(hideModal, 300);
         })
-    
-        }
+    }
 
     function hideModal () {
         let firstModal = document.getElementById("first-modal");
-        firstModal.classList.add("hide-modal")
+        firstModal.classList.add("hide-modal");
     }
 
     // create an array for the random cards
@@ -97,7 +96,8 @@ function showCard (cardRevealed, card) {
     
 }
 
-    // Checks if cards that have been clicked match
+// Checks if cards that have been clicked match
+
 function checkMatch (cardRevealed) {
 
     let firstCard = cardRevealed[0].getAttribute("data-type");
@@ -132,15 +132,42 @@ function checkMatch (cardRevealed) {
 // Check when all cards are revealed and game finished
 
 function gameOver () {
-    let checkCards = document.getElementsByClassName("card-revealed")
+
+    let checkCards = document.getElementsByClassName("card-revealed");
+    let removeCards = document.getElementsByClassName("random-card-area")[0];
+
+   
 
     if (checkCards.length === numOfCards) {
         let currentScore = (document.getElementById("score").innerText);
         let bestScore = (document.getElementById("high-score").innerText);
-        
-        if (currentScore > bestScore) {
+        if (currentScore <= bestScore) {
             document.getElementById("high-score").innerText = currentScore
-        }            
+
+            while (removeCards.children.length > 0) {
+                removeCards.children[0].remove();
+            };
+            
+            startGame();
+            currentScore.innerText = 0
+        } else if (currentScore === bestScore) {
+            document.getElementById("high-score").innerText = currentScore
+
+            while (removeCards.children.length > 0) {
+                removeCards.children[0].remove();
+            };
+            
+            startGame();
+        } else if (currentScore > bestScore) {
+
+            while (removeCards.children.length > 0) {
+                removeCards.children[0].remove();
+            };
+            
+            startGame();
+            
+        }    
+              
     }
 }
 
