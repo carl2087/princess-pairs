@@ -86,7 +86,7 @@ function showCard (cardRevealed, card) {
         }
         setTimeout(function () {
             checkMatch(cardRevealed);
-        }, 1000);
+        }, 500);
         
     } else if (cardRevealed.length > 2) {
         alert ("Too many cards open!")

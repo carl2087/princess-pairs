@@ -110,7 +110,7 @@ header>h1 {
 .hidden {
     animation-fill-mode: forwards;
     animation-name: card-hidden;
-    animation-duration: 2s;
+    animation-duration: .75s;
 }
 
 @keyframes card-hidden {
