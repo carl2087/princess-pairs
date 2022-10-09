@@ -136,12 +136,12 @@ function gameOver () {
     let checkCards = document.getElementsByClassName("card-revealed");
     let removeCards = document.getElementsByClassName("random-card-area")[0];
 
-   
-
     if (checkCards.length === numOfCards) {
-        let currentScore = (document.getElementById("score").innerText);
-        let bestScore = (document.getElementById("high-score").innerText);
-        if (currentScore <= bestScore) {
+
+        let currentScore = parseInt(document.getElementById("score").innerText);
+        let bestScore = parseInt(document.getElementById("high-score").innerText);
+
+        if (currentScore < bestScore) {
             document.getElementById("high-score").innerText = currentScore
 
             while (removeCards.children.length > 0) {
@@ -149,8 +149,9 @@ function gameOver () {
             };
             
             startGame();
-            currentScore.innerText = 0
-        } else if (currentScore === bestScore) {
+            highScore();
+            resetCount();
+        } else if (bestScore === 0) {
             document.getElementById("high-score").innerText = currentScore
 
             while (removeCards.children.length > 0) {
@@ -158,6 +159,8 @@ function gameOver () {
             };
             
             startGame();
+            highScore();
+            resetCount();
         } else if (currentScore > bestScore) {
 
             while (removeCards.children.length > 0) {
@@ -165,7 +168,8 @@ function gameOver () {
             };
             
             startGame();
-            
+            highScore();
+            resetCount();            
         }    
               
     }
@@ -179,6 +183,19 @@ function correctAnswer () {
 }
 
 function highScore () {
+
     let bestScore = parseInt(document.getElementById("score").innerText);
-    let newBestScore = parseInt(document.getElementById)("high-score");   
+    let newBestScore = parseInt(document.getElementById("high-score").innerText);
+    
+    if (newBestScore === 0) {
+        document.getElementById("score").innerText = bestScore;
+    } else if (bestScore < newBestScore) {
+        document.getElementById("score").innerText = bestScore;
+    }
+
+}
+
+function resetCount () {
+    let counter = parseInt(document.getElementById("score").innerText);
+    counter.innerText = 0
 }
