@@ -18,8 +18,10 @@ function startGame(){
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            setTimeout(hideModal, 300);
-        })
+            setTimeout(hideModal, 250);
+            tryAgain();
+            startGame();
+        });
     }
 
 
@@ -199,8 +201,20 @@ function highScore () {
 
 }
 
+// Resets the score counter
+
 function resetCount () {
-    
+
     document.getElementById("score").innerText = 0
  
+}
+
+// Lets user try game again without refreshing browser
+
+function tryAgain () {
+
+    let reset =  document.getElementsByClassName("random-card-area")[0];
+    while (reset.children.length > 0) {
+        reset.children[0].remove();
+    }
 }
