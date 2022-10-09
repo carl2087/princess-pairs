@@ -22,6 +22,8 @@ function startGame(){
         })
     }
 
+
+
     function hideModal () {
         let firstModal = document.getElementById("first-modal");
         firstModal.classList.add("hide-modal");
@@ -67,6 +69,8 @@ function startGame(){
     for (let card of cards) {
         card.addEventListener("click", seeCard)
     }
+
+    resetCount();
     
 }
 
@@ -150,7 +154,7 @@ function gameOver () {
             
             startGame();
             highScore();
-            resetCount();
+            
         } else if (bestScore === 0) {
             document.getElementById("high-score").innerText = currentScore
 
@@ -160,7 +164,7 @@ function gameOver () {
             
             startGame();
             highScore();
-            resetCount();
+            
         } else if (currentScore > bestScore) {
 
             while (removeCards.children.length > 0) {
@@ -169,7 +173,7 @@ function gameOver () {
             
             startGame();
             highScore();
-            resetCount();            
+                        
         }    
               
     }
@@ -196,6 +200,7 @@ function highScore () {
 }
 
 function resetCount () {
-    let counter = parseInt(document.getElementById("score").innerText);
-    counter.innerText = 0
+    
+    document.getElementById("score").innerText = 0
+ 
 }
