@@ -13,8 +13,11 @@ let seeCard = function (e) {
     showCard(cardRevealed, e.currentTarget);
 };
 
+// Start game function to set up game for playing
 
 function startGame(){
+
+    // Event listener for buttons on page to perform specific functions
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -24,11 +27,15 @@ function startGame(){
             setTimeout(hideFinalModal, 250);
         });
     }
+
+    // Hide the and game modal
     
     function hideFinalModal () {
         let finalModal = document.getElementById("final-modal")
         finalModal.classList.add("hide-modal");
     }
+
+    // Hide the modal that appears on page load
 
     function hideModal () {
         let firstModal = document.getElementById("first-modal");
@@ -36,6 +43,7 @@ function startGame(){
     }
 
     // create an array for the random cards
+
     let randomArray = [];
     while (randomArray.length < numOfCards) {
         let number = Math.floor(Math.random() * numOfCards);
@@ -71,16 +79,23 @@ function startGame(){
         cardGame[0].appendChild(image);
     }
 
+    // Add an event listener to princess cards
+
     cards = document.getElementsByClassName("card-back");
     for (let card of cards) {
         card.addEventListener("click", seeCard)
     }
 
+    // Calls function to reset the current score count
+
     resetCount();
     
 }
 
+// Reveals princesses on cards when clicked
+
 function showCard (cardRevealed, card) {
+
     card.classList.remove("hidden")
     card.removeEventListener("click", seeCard)
     cardRevealed.push(card);
@@ -98,11 +113,12 @@ function showCard (cardRevealed, card) {
         alert ("Too many cards open!")
         throw `Too Many cards open! Abort!`
     }
-        
-    
+           
 }
 
-// Checks if cards that have been clicked match
+/** Checks if cards that have been clicked match
+ * and changes the picture to a flower
+ */ 
 
 function checkMatch (cardRevealed) {
 
@@ -184,10 +200,14 @@ function gameOver () {
     }
 }
 
+// Increases the move counter when two cards are clicked
+
 function correctAnswer () {
     let newScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++newScore;
 }
+
+// Places the current lowest move tally in best score
 
 function highScore () {
 
@@ -199,7 +219,6 @@ function highScore () {
     } else if (bestScore < newBestScore) {
         document.getElementById("score").innerText = bestScore;
     }
-
 }
 
 // Resets the score counter
@@ -207,8 +226,7 @@ function highScore () {
 function resetCount () {
 
     document.getElementById("score").innerText = 0
- 
-}
+ }
 
 // Lets user try game again without refreshing browser
 
@@ -220,8 +238,9 @@ function tryAgain () {
     }
 }
 
+// Shows end game modal on screen
+
 function showFinalModal () {
     
     document.getElementById("final-modal").classList.remove("hide-modal");
-
 }

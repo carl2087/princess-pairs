@@ -258,6 +258,10 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    .start-button {
+        font-size: 1.1em;
+    }
+
     .modal-title {
         font-size: 1.7em;
     }
@@ -327,7 +331,12 @@ footer {
 
 /* for screen size 375 pixels and below */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px){
+
+    .start-button {
+        font-size: 1em;
+    }
+
     .random-card-area>img {
         max-height: 48px;
     }
