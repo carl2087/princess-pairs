@@ -21,10 +21,14 @@ function startGame(){
             setTimeout(hideModal, 250);
             tryAgain();
             startGame();
+            setTimeout(hideFinalModal, 250);
         });
     }
-
-
+    
+    function hideFinalModal () {
+        let finalModal = document.getElementById("final-modal")
+        finalModal.classList.add("hide-modal");
+    }
 
     function hideModal () {
         let firstModal = document.getElementById("first-modal");
@@ -74,10 +78,6 @@ function startGame(){
 
     resetCount();
     
-}
-
-function playGame () {
-    console.log("button clicked")
 }
 
 function showCard (cardRevealed, card) {
@@ -156,6 +156,7 @@ function gameOver () {
             
             startGame();
             highScore();
+            showFinalModal();
             
         } else if (bestScore === 0) {
             document.getElementById("high-score").innerText = currentScore
@@ -166,7 +167,8 @@ function gameOver () {
             
             startGame();
             highScore();
-            
+            showFinalModal();
+
         } else if (currentScore > bestScore) {
 
             while (removeCards.children.length > 0) {
@@ -175,13 +177,12 @@ function gameOver () {
             
             startGame();
             highScore();
+            showFinalModal();
                         
         }    
               
     }
 }
-
-
 
 function correctAnswer () {
     let newScore = parseInt(document.getElementById("score").innerText);
@@ -217,4 +218,10 @@ function tryAgain () {
     while (reset.children.length > 0) {
         reset.children[0].remove();
     }
+}
+
+function showFinalModal () {
+    
+    document.getElementById("final-modal").classList.remove("hide-modal");
+
 }
