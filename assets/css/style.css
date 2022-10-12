@@ -11,7 +11,7 @@
 header>h1 {
     text-align: center;
     font-size: 4rem;
-    color: #fe4140;
+    color: #af0403;
     margin-bottom: 20px;
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
     letter-spacing: .1em;
@@ -23,7 +23,7 @@ header>h1 {
 }
 
 .start-button {
-    color: #fe4140;
+    color: #af0403;
     font-size: 2rem;
     border: ridge 4px #5efc8d;
     padding: 8px;
@@ -48,7 +48,7 @@ header>h1 {
     width: 50%;
     margin-left: 19%;
     background-color: #5efc8dad;
-    border: ridge 4px #fe4140;
+    border: ridge 4px #af0403;
     z-index: 99;
 }
 
@@ -60,22 +60,22 @@ header>h1 {
     font-size: 3em;
     letter-spacing: .1em;
     background: none;
-    color: #fe4140;
+    color: #af0403;
     text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 .modal-text {
     background-color: #5efc8d00;
-    color: #fe4140;
+    color: #af0403;
     font-size: 2em;
     text-shadow: 1.5px 0 0 #000, 0 -1.5px 0 #000, 0 1.5px 0 #000, -1.5px 0 0 #000;
     line-height: 1.5em;
 }
 
 .modal-button {
-    color: #fe4140;
+    color: #af0403;
     font-size: 2rem;
-    border: ridge 4px #fe4140;
+    border: ridge 4px #af0403;
     padding: 8px;
     background-color: whitesmoke;
     margin-top: 10%;
@@ -83,7 +83,7 @@ header>h1 {
 }
 
 .modal-button:hover {
-    box-shadow: 0 0 15px #fe4140;
+    box-shadow: 0 0 15px #af0403;
 }
 
 #game-area {
@@ -103,7 +103,7 @@ header>h1 {
     border-radius: 5px;
     background-color: whitesmoke;
     margin: 20px;
-    box-shadow: 0 0 10px #fe4140;
+    box-shadow: 0 0 10px #af0403;
 }
 
 #game-area>img {
@@ -147,7 +147,7 @@ header>h1 {
 #score-area>p {
     display: inline;
     margin: auto;
-    color: #fe4140;
+    color: #af0403;
     font-size: 2rem;
     padding: 50px;
     padding-bottom: 0;
