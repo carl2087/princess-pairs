@@ -28,7 +28,7 @@ function startGame(){
         });
     }
 
-    // Hide the and game modal
+    // Hide the end game modal
     
     function hideFinalModal () {
         let finalModal = document.getElementById("final-modal");
